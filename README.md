@@ -3,3 +3,5 @@
 
 
 A valorant lore bot for a private server
+
+- A lot of code cleaning to do :/
