@@ -98,7 +98,7 @@ class mod(commands.Cog):
         await ctx.send(embed=embed)
     
     @rule.command(aliases=["13", "cheats", "begging", "buying", "selling"])
-    @command.has_guild_permissions(ban_members=True)
+    @commands.has_guild_permissions(ban_members=True)
     async def _13(self, ctx):
         embed = discord.embed(title=":one::three: Discussing cheats and other bannable actions:", description="Such as (but not limited to) buying, selling, trading, giving away, or begging for accounts, cheats,\"boosting\", VP, codes, money, referrals, or other goods.", colour=0x00FF8B)
         embed.set_footer(text="Punishment: Warn -> Ban")
