@@ -21,4 +21,4 @@ class __Help__(commands.Cog):
 
 def setup(bot):
     bot.add_cog(__Help__(bot))
-    print('Help is Ready')
+    print('Help.py loaded')

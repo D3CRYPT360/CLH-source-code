@@ -172,4 +172,4 @@ class __Cards__(commands.Cog):
 
 def setup(bot):
     bot.add_cog(__Cards__(bot))
-    print('player card loaded')
+    print('Cards.py loaded')

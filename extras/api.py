@@ -66,4 +66,4 @@ class down(commands.Cog):
     
 def setup(bot):
     bot.add_cog(down(bot))
-    print('sadge')
+    print('Api.py loaded')

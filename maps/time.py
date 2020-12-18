@@ -33,7 +33,7 @@ class map(commands.Cog):
         embed = discord.Embed(
             colour=0xFF4654
         )
-        embed.add_field(name = "Map codes", value="```-Duality == Bind\n-Bonsai == Split\n-Triad == Haven\n-Venice == Ascent\n-Port == Icebox```")
+        embed.add_field(name = "Map codes", value="```-Duality == Bind\n-Bonsai == Split\n-Triad == Haven\n-Venice == Ascent\n-Port == Icebox\n-The Range == Poveglia```")
         await ctx.send(embed=embed)
 
 
@@ -42,4 +42,4 @@ class map(commands.Cog):
 
 def setup(bot):
     bot.add_cog(map(bot))
-    print('Map lore')
+    print('Time.py loaded')

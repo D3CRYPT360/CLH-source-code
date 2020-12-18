@@ -63,4 +63,4 @@ class __Misc__(commands.Cog):
 
 def setup(bot):
     bot.add_cog(__Misc__(bot))
-    print('funlul')
+    print('Misc.py loaded')

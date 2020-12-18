@@ -176,4 +176,4 @@ class __Agent_lore__(commands.Cog):
 
 def setup(bot):
     bot.add_cog(__Agent_lore__(bot))
-    print('Agent lore is loaded')
+    print('Agentlore.py loaded')
