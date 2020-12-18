@@ -164,5 +164,5 @@ class beta(commands.Cog):
         
 def setup(bot):
     bot.add_cog(beta(bot))
-    print('Help is Ready')
+    print('Beta.py loaded')
 

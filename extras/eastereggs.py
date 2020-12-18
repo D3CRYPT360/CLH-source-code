@@ -50,4 +50,4 @@ class egg(commands.Cog):
 
 def setup(bot):
     bot.add_cog(egg(bot))
-    print('egg')
+    print('Eastereggs.py loaded')

@@ -6,17 +6,11 @@ from itertools import cycle
 import platform
 import datetime
 import asyncio
-import requests
-from bs4 import BeautifulSoup
-from pathlib import Path
+from dotenv import load_dotenv
+import os
 import json
 
-cwd = Path(__file__).parents[0]
-cwd = str(cwd)
-secret = json.load(open(cwd+'/configs/config.json'))
-
-
-
+load_dotenv('.env')
 
 intents = discord.Intents(messages = True, guilds = True, reactions = True, members = True, presences = False)
 bot = commands.Bot(command_prefix = '/', case_insensitive=True , intents = intents)
@@ -33,7 +27,7 @@ async def change_status():
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.playing, name="VALORANT"))
-    print('Cool')
+    print('Bot Online!')
 
 
 
@@ -48,7 +42,7 @@ initial_extensions = ['agents.agentlore',
                       'extras.eastereggs',
                       'extras.mods',
                       'extras.api',
-                      'maps.split',
+                      'maps.maps',
                       'maps.time',
 
                       ]
@@ -81,7 +75,7 @@ async def stats(ctx):
   embed.add_field(name='Discord.py Version', value=dpyVersion)
   embed.add_field(name='Total Guilds:', value=serverCount)
   embed.add_field(name='Total Users:', value=memberCount)
-  embed.add_field(name='Bot Developer:', value="<@482179909633048597>")
+  embed.add_field(name='Bot Developers:', value="<@482179909633048597>\n<@563361513281421313>")
 
 
   embed.set_footer(text=f"( ͡° ͜ʖ ͡°) | {bot.user.name}")
@@ -99,4 +93,4 @@ async def online():
 
 
 bot.load_extension("jishaku")
-bot.run(secret['token'])
+bot.run(os.getenv('DISCORD_TOKEN'))

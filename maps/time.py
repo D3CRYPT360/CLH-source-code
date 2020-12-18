@@ -42,4 +42,4 @@ class map(commands.Cog):
 
 def setup(bot):
     bot.add_cog(map(bot))
-    print('Map lore')
+    print('Time.py loaded')

@@ -40,4 +40,4 @@ class __Agentmaps__(commands.Cog):
 
 def setup(bot):
     bot.add_cog(__Agentmaps__(bot))
-    print('AM is loaded')
+    print('Agentmaps.py loaded')

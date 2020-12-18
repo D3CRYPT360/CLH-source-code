@@ -115,7 +115,7 @@ class mod(commands.Cog):
     @rule.command(aliases=["tag", "ta"])
     @has_permissions(kick_members=True)
     async def tags(self, ctx):
-        embed = discord.Embed(title="Rule Tags", description="\u200b", colour=discord.Colour.red())
+        embed = discord.Embed(title="Rule Tags", description="", colour=discord.Colour.red())
         embed.add_field(name="Rule 1", value="[harrasment, discrimination, race]", inline=False)
         embed.add_field(name="Rule 2", value="[english, nonenglish]", inline=False)
         embed.add_field(name="Rule 3", value="[nsfw]", inline=False)
@@ -134,4 +134,4 @@ class mod(commands.Cog):
 
 def setup(bot):
     bot.add_cog(mod(bot))
-    print('funlul')
+    print('Mods.py loaded')
