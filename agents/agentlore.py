@@ -28,7 +28,7 @@ class __Agent_lore__(commands.Cog):
             title = "__Viper Lore:__",
             description = "[Click for Official Viper Lore](https://discordapp.com/channels/708983243847761931/727953100110823446/742456639277236294)\n[Click for Unofficial Viper Lore](https://discordapp.com/channels/708983243847761931/747484591836758127/748654881392296067)"
         )
-        embed.add_field(name="__Agent Info:__", value="```Name: Viper\nCodename: Pandemic (scrapped)\nReal Name: Sabine\nAgent ID: 02\nCountry: USA\nType: Controller```", inline=True)
+        embed.add_field(name="__Agent Info:__", value="```Name: Viper\nCodename: Pandemic\nReal Name: Sabine\nAgent ID: 02\nCountry: USA\nType: Controller```", inline=True)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/746327425759182908/765111844041523210/TX_Character_Thumb_Pandemic.png")
         await ctx.send(embed=embed)
 
@@ -41,7 +41,7 @@ class __Agent_lore__(commands.Cog):
             title = "__Omen Lore:__",
             description = "[Click for Official Omen Lore](https://discordapp.com/channels/708983243847761931/727953100110823446/742457266254381186)\n[Click for Unofficial Omen Lore](https://discordapp.com/channels/708983243847761931/747484591836758127/748667838100668549)"
         )
-        embed.add_field(name="__Agent Info:__", value="```Name: Omen\nCodename: Wraith (scrapped)\nReal Name: ???\nAgent ID: 03\nCountry: ???\nType: Controller```", inline=True)
+        embed.add_field(name="__Agent Info:__", value="```Name: Omen\nCodename: Wraith\nReal Name: ???\nAgent ID: 03\nCountry: ???\nType: Controller```", inline=True)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/746327425759182908/765111852866207744/TX_Character_Thumb_Wraith.png")
         await ctx.send(embed=embed)
 
@@ -67,7 +67,7 @@ class __Agent_lore__(commands.Cog):
             title= "__Cypher Lore:__",
             description = "[Click for Official Cypher Lore](https://discordapp.com/channels/708983243847761931/727953100110823446/742696637708763138)\n[Click for Unofficial Cypher Lore](https://discordapp.com/channels/708983243847761931/747484591836758127/748711251928154232)"
         )
-        embed.add_field(name="__Agent Info:__", value="```Name: CYPHER\nCodename: Gumshoe (scrapped)\nReal Name: Aamir\nAgent ID: 05\nCountry: Morocco\nType: Sentinel```", inline=True)
+        embed.add_field(name="__Agent Info:__", value="```Name: CYPHER\nCodename: Gumshoe\nReal Name: Aamir\nAgent ID: 05\nCountry: Morocco\nType: Sentinel```", inline=True)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/746327425759182908/765111840057327636/TX_Character_Thumb_Gumshoe.png")
         await ctx.send(embed=embed)
 
@@ -93,7 +93,7 @@ class __Agent_lore__(commands.Cog):
             title= "__Sage Lore:__",
             description = "[Click for Official Sage Lore](https://discordapp.com/channels/708983243847761931/727953100110823446/742697064365949030)\n[Click for Unofficial Sage Lore](https://discordapp.com/channels/708983243847761931/747484591836758127/748906193757405216)"
         )
-        embed.add_field(name="__Agent Info:__", value="```Name: Sage\nCodename: Thorne (scrapped)\nReal Name: ???\nAgent ID: 07\nCountry: China\nType: Sentinel```", inline=True)
+        embed.add_field(name="__Agent Info:__", value="```Name: Sage\nCodename: Thorne\nReal Name: ???\nAgent ID: 07\nCountry: China\nType: Sentinel```", inline=True)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/746327425759182908/765111850316333076/TX_Character_Thumb_Thorne.png")
         await ctx.send(embed=embed)
 
@@ -119,7 +119,7 @@ class __Agent_lore__(commands.Cog):
             title="__Jett Lore:__",
             description = "[Click for Official Jett Lore](https://discordapp.com/channels/708983243847761931/727953100110823446/742698186686332929)\n[Click for Unofficial Jett Lore](https://discordapp.com/channels/708983243847761931/747484591836758127/748990254010204311)"
         )
-        embed.add_field(name="__Agent Info:__", value="```Name: Jett\nCodename: Hawks\nScrapped Codename: Wushu\nAgent ID: 10\nReal Name: Joon Hee\nCountry: South Korea\nType: Duelist```", inline=True)
+        embed.add_field(name="__Agent Info:__", value="```Name: Jett\nCodename: Wushu/Hawks\nAgent ID: 10\nReal Name: Joon Hee\nCountry: South Korea\nType: Duelist```", inline=True)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/759101153073692722/765112123856257064/TX_Character_Thumb_Wushu.png")
         await ctx.send(embed=embed)
 
@@ -132,7 +132,7 @@ class __Agent_lore__(commands.Cog):
             title = "__Reyna Lore:__",
             description = "[Click for Official Reyna Lore](https://discordapp.com/channels/708983243847761931/727953100110823446/742698335168888874)\n[Click for Unofficial Reyna Lore](https://discordapp.com/channels/708983243847761931/747484591836758127/749018798543339572)"
         )
-        embed.add_field(name="__Agent Info:__", value="```Name: Reyna\nCodename: Vampire (scrapped)\nReal Name: ???\nAgent ID: 11\nCountry: Mexico\nType: Duelist```", inline=True)
+        embed.add_field(name="__Agent Info:__", value="```Name: Reyna\nCodename: Vampire\nReal Name: ???\nAgent ID: 11\nCountry: Mexico\nType: Duelist```", inline=True)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/759101153073692722/765112192097189908/TX_Character_Thumb_Vampire.png")
         await ctx.send(embed=embed)
 
@@ -145,7 +145,7 @@ class __Agent_lore__(commands.Cog):
             title= "__Raze Lore:__",
             description = "[Click for Official Raze Lore](https://discordapp.com/channels/708983243847761931/727953100110823446/742698493680025611)\n[Click for Unofficial Raze Lore](https://discordapp.com/channels/708983243847761931/747484591836758127/749202008090869850)"
         )
-        embed.add_field(name="__Agent Info:__", value="```Name: Raze\nCodename: Clay (scrapped)\nReal Name: ???\nAgent ID: 12\nCountry: Brazil\nType: Duelist```", inline=True)
+        embed.add_field(name="__Agent Info:__", value="```Name: Raze\nCodename: Clay\nReal Name: ???\nAgent ID: 12\nCountry: Brazil\nType: Duelist```", inline=True)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/759101153073692722/765112104155086858/TX_Character_Thumb_Raze.png")
         await ctx.send(embed=embed)
 
@@ -172,7 +172,7 @@ class __Agent_lore__(commands.Cog):
             title= "__Skye lore:__",
             description = "[Click for Official Skye Lore](https://discordapp.com/channels/708983243847761931/727953100110823446/770698138972454932)\n[Click for Unofficial Skye Lore](https://discordapp.com/channels/708983243847761931/747484591836758127/763465241966542908)"
         )
-        embed.add_field(name="__Agent Info:__", value="```Name: Skye\nCodename: Guide (scrapped)\nReal Name: Emily\nAgent ID: 14\nCountry: Australia\nType: Initiator```", inline=True)
+        embed.add_field(name="__Agent Info:__", value="```Name: Skye\nCodename: Guide\nReal Name: Emily\nAgent ID: 14\nCountry: Australia\nType: Initiator```", inline=True)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/745696342260711516/770696329462415360/TX_Character_Thumb_Guide_256.png")
         await ctx.send(embed=embed)
 
