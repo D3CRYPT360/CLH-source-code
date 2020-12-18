@@ -18,7 +18,7 @@ bot.remove_command('help')
 
 loop = cycle(['/help for help', 'constant = sova', 'playing VALORANT', 'omen is an octopus'])
 
-bot.version = "10.5"
+bot.version = "10.6"
 
 @tasks.loop(seconds=60)
 async def change_status():
