@@ -6,7 +6,11 @@ from itertools import cycle
 import platform
 import datetime
 import asyncio
+from dotenv import load_dotenv
+import os
 import json
+
+load_dotenv('.env')
 
 intents = discord.Intents(messages = True, guilds = True, reactions = True, members = True, presences = False)
 bot = commands.Bot(command_prefix = '/', case_insensitive=True , intents = intents)
@@ -89,4 +93,4 @@ async def online():
 
 
 bot.load_extension("jishaku")
-bot.run("Nzg5NDEwMTg3MTQ4NTI1NTg5.X9xphw.0ntASFqBGYWvuAFN4lIkiviqiXk")
+bot.run(os.getenv('DISCORD_TOKEN'))
