@@ -4,4 +4,4 @@
 
 A valorant lore bot for a private server
 
-- Horrible
+- Horrible codes kero
