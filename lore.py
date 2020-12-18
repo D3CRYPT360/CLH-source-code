@@ -15,19 +15,7 @@ cwd = Path(__file__).parents[0]
 cwd = str(cwd)
 secret = json.load(open(cwd+'/configs/config.json'))
 
-#PATCH CHECKER
-link = "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-1-13/"
-s = BeautifulSoup(requests.get(link)._content, "lxml")
-canonical = s.find('link', {'rel': 'canonical'})
-result = canonical['href']
 
-#UPDATE CHECKER
-Dict = {}
-
-url = "https://clientconfig.rpg.riotgames.com/api/v1/config/public?os=windows&app=Riot%20Client&patchline=KeystoneFoundationLiveWin"
-r = requests.get(url)
-json_data = r.json()
-basepath = json_data["keystone.products.valorant.patchlines.live"]["platforms"]["win"]["configurations"]
 
 
 intents = discord.Intents(messages = True, guilds = True, reactions = True, members = True, presences = False)
@@ -109,58 +97,6 @@ async def online():
     await channel.send("<a:PETTHECONSTANT:758226856566063114>")
     await asyncio.sleep(10)
 
-#Defining
-@tasks.loop(seconds = 12.0) # running the task every 12 secs. 5 requests every 60 seconds
-async def update():
-    for index in range(len(basepath)):
-        id = basepath[index]["id"]
-        patch_url = basepath[index]["patch_url"].rsplit('/',1)[1].rsplit('.',1)[0]
-        if(len(Dict) < len(basepath)):
-            Dict[id] = patch_url # creating keys and setting base values
-                    
-        elif(Dict[id] != patch_url):
-            channel = bot.get_channel(int(746327425759182908))
-            if not any(x == patch_url for x in Dict.values()):
-                await channel.send("--- New update [{}] ---".format([Dict[id]]))
-                        
-                Dict[id] = patch_url    # updating value of current region to new one
-                await channel.send(f"{id} region has received update: <@482179909633048597>")
-                if(all(x == Dict[id] for x in Dict.values())):
-                    await channel.send(f"--- All regions received [{Dict[id]}] ---")
-                    update.stop()
-                
-@update.before_loop
-async def wait_for_bot(): #waiting for the bot to go online so it won't start the loop before it goes online
-    await bot.wait_until_ready()
 
-@bot.command()
-async def dict(ctx):
-    await ctx.send(Dict)
-
-@bot.command(aliases=["restart"])
-@commands.is_owner()
-async def reset(ctx):
-    update.restart()
-    await ctx.send("Patch Command has been restarted")
-
-
-@tasks.loop(seconds=12.0)    
-async def patch():
-    if result == link:
-        channel = bot.get_channel(int(746327425759182908))
-        await channel.send(link + "\nNew Patch updated")
-        patch.stop()
-
-
-@patch.before_loop
-async def wait(): #waiting for the bot to go online so it won't start the loop before it goes online
-    await bot.wait_until_ready()
-    
-@bot.command()
-async def debug(ctx):
-    await ctx.send("The bot is currently looking for \n" + link)
-
-update.start()
-patch.start()
 bot.load_extension("jishaku")
 bot.run(secret['token'])
