@@ -110,7 +110,11 @@ class Mod(commands.Cog):
     async def _14(self, ctx):
         embed = discord.Embed(title=":one::three: Discussing cheats and other bannable actions:", description="Such as (but not limited to) buying, selling, trading, giving away, or begging for accounts, cheats,\"boosting\", VP, codes, money, referrals, or other goods.", colour=0x00FF8B)
         embed.set_footer(text="Punishment: -> Ban")
-        await ctx.send(embed=embed)   
+        await ctx.send(embed=embed)
+    
+    @rule.command(aliases=["34"])
+    async def _34(self, ctx):
+        await ctx.send("Horny?")
 
     @rule.command(aliases=["tag", "ta"])
     @has_permissions(kick_members=True)
