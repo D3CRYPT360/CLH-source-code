@@ -59,6 +59,7 @@ class maps(commands.Cog):
     async def icebox(self, ctx):
         embed = discord.Embed(
             colour=discord.Colour.blurple(),
+
             title = "__Icebox Lore:__",
             description="[Click for General Lore](https://discord.com/channels/708983243847761931/747040395891966002/763054857421848597)\n[Click for Unconfirmed Lore](https://discord.com/channels/708983243847761931/749187232530825266/763068019030229022)\n[Click for Scrapped Lore](https://discord.com/channels/708983243847761931/749305721467699273/763323710764613632)",
         )
