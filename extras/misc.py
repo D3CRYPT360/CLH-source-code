@@ -7,7 +7,7 @@ import time
 
 
 
-class __Misc__(commands.Cog):
+class Misc(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
@@ -62,5 +62,5 @@ class __Misc__(commands.Cog):
             await message.add_reaction("<:upvote:762456415751110697>")
 
 def setup(bot):
-    bot.add_cog(__Misc__(bot))
+    bot.add_cog(Misc(bot))
     print('Misc.py loaded')

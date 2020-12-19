@@ -5,7 +5,7 @@ import requests
 thumbnail = "https://cdn.discordapp.com/avatars/514418193364942850/7c56b3712cd14ae3db6c8593c5f23cf5.png?size=256"
 
 
-class down(commands.Cog):
+class Down(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         
@@ -65,5 +65,5 @@ class down(commands.Cog):
             
     
 def setup(bot):
-    bot.add_cog(down(bot))
+    bot.add_cog(Down(bot))
     print('Api.py loaded')

@@ -3,7 +3,7 @@ from discord.ext import commands
 from discord.ext.commands import has_permissions
 
 
-class mod(commands.Cog):
+class Mod(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -110,7 +110,7 @@ class mod(commands.Cog):
     async def _14(self, ctx):
         embed = discord.Embed(title=":one::three: Discussing cheats and other bannable actions:", description="Such as (but not limited to) buying, selling, trading, giving away, or begging for accounts, cheats,\"boosting\", VP, codes, money, referrals, or other goods.", colour=0x00FF8B)
         embed.set_footer(text="Punishment: -> Ban")
-        await ctx.send(embed=embed)       
+        await ctx.send(embed=embed)   
 
     @rule.command(aliases=["tag", "ta"])
     @has_permissions(kick_members=True)
@@ -133,5 +133,5 @@ class mod(commands.Cog):
         await ctx.send(embed=embed)
 
 def setup(bot):
-    bot.add_cog(mod(bot))
+    bot.add_cog(Mod(bot))
     print('Mods.py loaded')

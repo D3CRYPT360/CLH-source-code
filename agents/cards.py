@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class __Cards__(commands.Cog):
+class Cards(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
@@ -171,5 +171,5 @@ class __Cards__(commands.Cog):
         await ctx.send(embed=embed)
 
 def setup(bot):
-    bot.add_cog(__Cards__(bot))
+    bot.add_cog(Cards(bot))
     print('Cards.py loaded')
