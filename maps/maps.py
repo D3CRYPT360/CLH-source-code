@@ -35,7 +35,7 @@ class maps(commands.Cog):
     async def haven(self, ctx):
         embed = discord.Embed(
             colour=discord.Colour.red(),
-            title = "__General Haven Lore:__",
+            title = "__Haven Lore:__",
             description="[Click for General Lore](https://discord.com/channels/708983243847761931/747040395891966002/747392315944992819)\n[Click for Scrapped Lore](https://discord.com/channels/708983243847761931/749305721467699273/749914184367472713)",
         )
         embed.set_image(url="https://media.discordapp.net/attachments/784077729082376192/789486415570272266/Triad_preview.png"),
@@ -47,7 +47,7 @@ class maps(commands.Cog):
     async def ascent(self, ctx):
         embed = discord.Embed(
             colour=discord.Colour.dark_orange(),
-            title = "__General Ascent Lore:__",
+            title = "__Ascent Lore:__",
             description="[Click for General Lore](https://discord.com/channels/708983243847761931/747040395891966002/747136697036177458)\n[Click for Unconfirmed Lore](https://discord.com/channels/708983243847761931/749187232530825266/749306607669608499)\n[Click for Scrapped Lore](https://discord.com/channels/708983243847761931/749305721467699273/749914435455549480)",
         )
         embed.set_image(url="https://media.discordapp.net/attachments/784077729082376192/789486398855053312/Ascent_preview.png"),
@@ -59,7 +59,8 @@ class maps(commands.Cog):
     async def icebox(self, ctx):
         embed = discord.Embed(
             colour=discord.Colour.blurple(),
-            title = "__General Icebox Lore:__",
+
+            title = "__Icebox Lore:__",
             description="[Click for General Lore](https://discord.com/channels/708983243847761931/747040395891966002/763054857421848597)\n[Click for Unconfirmed Lore](https://discord.com/channels/708983243847761931/749187232530825266/763068019030229022)\n[Click for Scrapped Lore](https://discord.com/channels/708983243847761931/749305721467699273/763323710764613632)",
         )
         embed.set_image(url="https://media.discordapp.net/attachments/784077729082376192/789486419868385310/Icebox_preview.png"),

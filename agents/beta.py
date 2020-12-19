@@ -4,7 +4,7 @@ import DiscordUtils
 
 
 
-class beta(commands.Cog):
+class Beta(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     
@@ -163,6 +163,6 @@ class beta(commands.Cog):
         
         
 def setup(bot):
-    bot.add_cog(beta(bot))
+    bot.add_cog(Beta(bot))
     print('Beta.py loaded')
 

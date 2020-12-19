@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class __Agent_lore__(commands.Cog):
+class AgentLore(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
@@ -176,18 +176,20 @@ class __Agent_lore__(commands.Cog):
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/745696342260711516/770696329462415360/TX_Character_Thumb_Guide_256.png")
         await ctx.send(embed=embed)
 
+
      #rift lore
     @commands.command(description="Shows the lore about rifts")
     async def rift(self, ctx):
         embed = discord.Embed(
-            colour=discord.Colour.darker_gray(),
-            title="__Rift Lore:__",
-            description = "[Click for Rift Lore](https://discord.com/channels/708983243847761931/727811131254505523/748854274343043152)"
+            colour=0x48ADEB,
+            title="**Rift Lore**:",
+            description="[Click for Rift lore](https://discord.com/channels/708983243847761931/727811131254505523/748854274343043152)",
         )
-        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/745696342260711516/767025310285430824/Spray_Dark_Side_Beyond.gif")
+        embed.add_field(name="__Rift Info__", value="```A Rift is a wormhole (found in the game files).\n\nA wormhole can be visualized as a tunnel with two ends at seperate points in spacetime (i.e., different locations or different points in time, or both).```")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/784077729082376192/789785522016747542/skye__agent_reveal_trailer_-_v_1.gif")
 
         await ctx.send(embed=embed)
 
 def setup(bot):
-    bot.add_cog(__Agent_lore__(bot))
+    bot.add_cog(AgentLore(bot))
     print('Agentlore.py loaded')

@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import requests
 
-class egg(commands.Cog):
+class Egg(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
@@ -49,5 +49,5 @@ class egg(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(egg(bot))
+    bot.add_cog(Egg(bot))
     print('Eastereggs.py loaded')
