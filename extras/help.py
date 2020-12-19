@@ -6,7 +6,7 @@ import asyncio
 class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.bot.version = "11.0"
+        self.bot.version = "11.6"
 
     @commands.command()
     async def help(self, ctx):
