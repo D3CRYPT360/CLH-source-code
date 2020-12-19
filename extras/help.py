@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from disputils import BotEmbedPaginator
 import asyncio
+import platform
 
 class Help(commands.Cog):
     def __init__(self, bot):
