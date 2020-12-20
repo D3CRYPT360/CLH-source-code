@@ -132,8 +132,8 @@ class Mod(commands.Cog):
         embed.add_field(name="Rule 10", value="[bug, bugs, exploit, exploitation]", inline=False)
         embed.add_field(name="Rule 11", value="[riot, dev, devs, riotping, devping]", inline=False)
         embed.add_field(name="Rule 12", value="[promo, selfpromo, invites]", inline=False)
-        embed.add_field(name="Rule 13", value="[13, cheats, begging, buying, selling]", inline=False)
-        embed.add_field(name="Rule 14", value="[14, guidelines, tos]", inline=False)
+        embed.add_field(name="Rule 13", value="[cheats, begging, buying, selling]", inline=False)
+        embed.add_field(name="Rule 14", value="[guidelines, tos]", inline=False)
         await ctx.send(embed=embed)
 
 def setup(bot):

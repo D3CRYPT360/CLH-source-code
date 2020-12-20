@@ -66,6 +66,18 @@ class maps(commands.Cog):
         embed.set_image(url="https://media.discordapp.net/attachments/784077729082376192/789486419868385310/Icebox_preview.png"),
         embed.add_field(name="__Icebox Info:__", value="```\nCodename: Port\nLocation: Bennett Island/Russia\nCoordinates: 76.733333, 149.500000```"),
         await ctx.send(embed=embed)
+
+    @commands.command(aliases=["poveglia"])
+    async def range(self, ctx):
+        embed = discord.Embed(
+            colour=discord.Colour.orange(),
+
+            title = "__Range Lore:__",
+            description="[Click for General Lore](https://discord.com/channels/708983243847761931/747040395891966002/748104154362413166)\n[Click for Scrapped Lore](https://discord.com/channels/708983243847761931/749305721467699273/765456380576137234)",
+        )
+        embed.set_image(url="https://media.discordapp.net/attachments/784077729082376192/790108920290213908/5f76120834b55065b321e728_WestStudio-Valorant-26.jpg"),
+        embed.add_field(name="__Range Info:__", value="```\nCodename: Poveglia\nLocation: Venice/Italy\nCoordinates: 45.433333, 12.333333```"),
+        await ctx.send(embed=embed)
         
 def setup(bot):
     bot.add_cog(maps(bot))

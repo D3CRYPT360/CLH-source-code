@@ -38,6 +38,8 @@ class Help(commands.Cog):
             inline=False
         ).set_thumbnail(
             url="https://media.discordapp.net/attachments/784077729082376192/789547598708342824/9d86482f1f4d6b19263e4aa1ea3142d8-removebg-preview.png"
+        ).set_footer(
+            text="Page 1/3"
         ),
 
         discord.Embed(
@@ -46,6 +48,8 @@ class Help(commands.Cog):
             colour=0xFF4654
         ).set_thumbnail(
             url="https://media.discordapp.net/attachments/784077729082376192/789547598708342824/9d86482f1f4d6b19263e4aa1ea3142d8-removebg-preview.png"
+        ).set_footer(
+            text="Page 2/3"
         ),
 
         discord.Embed(
@@ -54,6 +58,8 @@ class Help(commands.Cog):
             colour=0xFF4654
         ).set_thumbnail(
             url="https://media.discordapp.net/attachments/784077729082376192/789547598708342824/9d86482f1f4d6b19263e4aa1ea3142d8-removebg-preview.png"
+        ).set_footer(
+            text="Page 3/3"
         )
         ]
         

@@ -3,10 +3,6 @@ from discord.ext import commands
 from discord.ext.commands import has_permissions
 import time
 
-
-
-
-
 class Misc(commands.Cog):
 
     def __init__(self, bot):
@@ -25,7 +21,7 @@ class Misc(commands.Cog):
     @commands.command(aliases = ['lang'])
     async def languages(self, ctx):
         embed = discord.Embed(
-            title="Languages supported by valorant",
+            title="Languages supported by Valorant",
             color=0xFF4654,
         )
         embed.add_field(name="ENGLISH ", value="English", inline=True)
@@ -43,18 +39,6 @@ class Misc(commands.Cog):
         embed.add_field(name="TÜRKÇE", value="Turkish")
         embed.add_field(name="العربية", value="Arabic")
         await ctx.send(embed=embed)
-
-
-
-
-
-    @commands.command()
-    @commands.is_owner()
-    async def test(self, ctx):
-        await ctx.send("IT WORKED")
-
-
-
 
     @commands.Cog.listener()
     async def on_message(self, message):
