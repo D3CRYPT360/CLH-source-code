@@ -53,6 +53,11 @@ class Egg(commands.Cog):
         embed.add_field(name = "__Agent Info:__", value="```Name: Shatter\nCodename: Shatter\nAgent ID: Unknown\nCountry: Unknown\nType: Controller```", inline=True)
         embed.set_thumbnail(url="https://media.discordapp.net/attachments/784077729082376192/791272831543148585/TX_Hud_Character_Shatter.png")
         await ctx.send(embed=embed)
+        
+    
+    @commands.command()
+    async def stealth(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/784077729082376192/791275751944093736/unknown.png")
 
 
 def setup(bot):
