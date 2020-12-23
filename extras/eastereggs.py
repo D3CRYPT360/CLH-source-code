@@ -43,8 +43,8 @@ class Egg(commands.Cog):
         await ctx.send(dog['link'])
         
     
-    @commands.command(aliases = ['brim' , 'sarge'])
-    async def brimstone(self, ctx):
+    @commands.command()
+    async def shatter(self, ctx):
         embed = discord.Embed(
             colour = discord.Colour.dark_gold(),
             title = "__Shatter Lore:__",
