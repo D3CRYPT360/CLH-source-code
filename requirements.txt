@@ -6,3 +6,4 @@ beautifulsoup4==4.9.1
 requests==2.21.0
 lxml==4.5.2
 jishaku==1.19.2.202
+valoStatus>=1.0.10
