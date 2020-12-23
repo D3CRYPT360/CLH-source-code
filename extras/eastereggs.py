@@ -42,10 +42,17 @@ class Egg(commands.Cog):
         dog = r.json()
         await ctx.send(dog['link'])
         
-        
-
-
-
+    
+    @commands.command(aliases = ['brim' , 'sarge'])
+    async def brimstone(self, ctx):
+        embed = discord.Embed(
+            colour = discord.Colour.dark_gold(),
+            title = "__Shatter Lore:__",
+            description = "[Click for Official Shatter Lore](https://www.youtube.com/watch?v=dQw4w9WgXcQ)\n[Click for Unofficial Shatter Lore](https://www.youtube.com/watch?v=dQw4w9WgXcQ)"
+        )
+        embed.add_field(name = "__Agent Info:__", value="```Name: Shatter\nCodename: Shatter\nAgent ID: 1\nCountry: Unknown\nType: Controller```", inline=True)
+        embed.set_thumbnail(url="https://media.discordapp.net/attachments/784077729082376192/791272831543148585/TX_Hud_Character_Shatter.png")
+        await ctx.send(embed=embed)
 
 
 def setup(bot):
