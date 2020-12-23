@@ -114,7 +114,7 @@ class Mod(commands.Cog):
     
     @rule.command(aliases=["34"])
     async def _34(self, ctx):
-        await ctx.send("https://tenor.com/view/horny-jail-bonk-dog-hit-head-stop-being-horny-gif-17298755")
+        await ctx.send("https://cdn.discordapp.com/emojis/756182493836738610.gif?v=1")
 
     @rule.command(aliases=["tag", "ta"])
     @has_permissions(kick_members=True)
