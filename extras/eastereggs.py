@@ -46,7 +46,7 @@ class Egg(commands.Cog):
     @commands.command()
     async def shatter(self, ctx):
         embed = discord.Embed(
-            colour = discord.Colour.purple(),
+            colour = 0xAEADD3,
             title = "__Shatter Lore:__",
             description = "[Click for Official Shatter Lore](https://www.youtube.com/watch?v=dQw4w9WgXcQ)\n[Click for Unofficial Shatter Lore](https://www.youtube.com/watch?v=dQw4w9WgXcQ)"
         )
