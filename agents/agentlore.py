@@ -102,7 +102,7 @@ class AgentLore(commands.Cog):
     @commands.command(aliases = ['grant' , 'phx'])
     async def phoenix(self, ctx):
         embed = discord.Embed(
-            colour=discord.Colour.orange(),
+            colour=0xEE9346,
             title= "__Phoenix Lore:__",
             description = "[Click for Official Phoenix Lore](https://discordapp.com/channels/708983243847761931/727953100110823446/742698018012266547)\n[Click for Unofficial Phoenix Lore](https://discordapp.com/channels/708983243847761931/747484591836758127/748979255374774494)"
         )
