@@ -26,7 +26,7 @@ class maps(commands.Cog):
     
     @commands.command(aliases=['ascent', 'icebox', 'haven', 'split'])
     async def bind(self, ctx):
-        await ctx.send("Command has changed to `/map [mapName]` without the []", delete_after=30)
+        await ctx.send("Command has changed to `/map [mapName]` without the []", delete_after=5)
                 
 
 def setup(bot):
