@@ -22,7 +22,7 @@ class Map(commands.Cog):
     async def duelist(self, ctx):
         embed = discord.Embed(
             colour=0xFF4654,
-            title=("**Duelist Cinematic happened in the Year 2049:**")
+            title=("**Duelists Cinematic happened in the Year 2049:**")
         )
         embed.set_image(url="https://cdn.discordapp.com/attachments/747040395891966002/747048776027603014/Duelists_time_line.JPG")
         await ctx.send(embed=embed)

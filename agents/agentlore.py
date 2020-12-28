@@ -71,6 +71,18 @@ class AgentLore(commands.Cog):
     async def viper(self, ctx):
         await ctx.send("Command has changed to `/agent [agentname]` without the []")
 
+    @commands.command(description="Shows the lore about rifts")
+    async def rift(self, ctx):
+        embed = discord.Embed(
+            colour=0x48ADEB,
+            title="**Rift Lore**:",
+            description="[Click for Rift lore](https://discord.com/channels/708983243847761931/727811131254505523/748854274343043152)",
+        )
+        embed.add_field(name="__Rift Info__", value="```A Rift is a wormhole (found in the game files).\n\nA wormhole can be visualized as a tunnel with two ends at seperate points in spacetime (i.e., different locations or different points in time, or both).```")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/784077729082376192/789785522016747542/skye__agent_reveal_trailer_-_v_1.gif")
+
+        await ctx.send(embed=embed)
+
 def setup(bot):
     bot.add_cog(AgentLore(bot))
     print('Agentlore.py loaded')
