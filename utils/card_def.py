@@ -48,36 +48,29 @@ def card_coverter_beta(card):
     
     elif card == "Viper" or "Pandemic" or "Sabine":
         page_list = [
-            "https://cdn.discordapp.com/attachments/747483388415311883/750328266208051260/Viper or Pandemic or Sabine_Lab_Coat.png",
-            "https://cdn.discordapp.com/attachments/747483388415311883/750328404380876901/Viper or Pandemic or Sabine_Ult.webp"
+            "https://cdn.discordapp.com/attachments/747483388415311883/750328266208051260/Viper_Lab_Coat.png",
+            "https://cdn.discordapp.com/attachments/747483388415311883/750328404380876901/Viper_Ult.webp"
             ]
         return page_list
     
     elif card == "Omen" or "Wraith":
         page_list = [
-            "https://cdn.discordapp.com/attachments/747483388415311883/750327950020313088/Omen or Wraith_Teleport.png",
-            "https://cdn.discordapp.com/attachments/747483388415311883/750328152936677376/Omen or Wraith_Ult.webp"
+            "https://cdn.discordapp.com/attachments/747483388415311883/750327950020313088/Omen_Teleport.png",
+            "https://cdn.discordapp.com/attachments/747483388415311883/750328152936677376/Omen_Ult.webp"
             ]
         return page_list
-    
-    elif card == "Killjoy" or "Kj":
-        page_list = [
-            "https://cdn.discordapp.com/attachments/747483388415311883/750327062505717791/Coffee.png",
-            "https://cdn.discordapp.com/attachments/747483388415311883/750327090166890526/Open_Up_The_Sky.png"
-            ]
-        return page_list
-    
+
     elif card == "Cypher" or "Aamir":
         page_list = [
-            "https://cdn.discordapp.com/attachments/747483388415311883/750327597644382298/Cypher or Aamir_1_m1.png",
-            "https://cdn.discordapp.com/attachments/747483388415311883/750327609199689808/Cypher or Aamir_card.png"
+            "https://cdn.discordapp.com/attachments/747483388415311883/750327597644382298/Cypher_1_m1.png",
+            "https://cdn.discordapp.com/attachments/747483388415311883/750327609199689808/Cypher_card.png"
             ]
         return page_list
     
     elif card == "Sova" or "Hunter" or "Constant" or "Constantvalorant":
         page_list = [
-            "https://cdn.discordapp.com/attachments/747483388415311883/750327862162227210/Sova or Hunter or Constant or Constantvalorant_Pose.png",
-            "https://cdn.discordapp.com/attachments/747483388415311883/750327874069725244/Sova or Hunter or Constant or Constantvalorant_Ult.png"
+            "https://cdn.discordapp.com/attachments/747483388415311883/750327862162227210/Sova_Pose.png",
+            "https://cdn.discordapp.com/attachments/747483388415311883/750327874069725244/Sova_Ult.png"
             ]
         return page_list
     
@@ -90,27 +83,27 @@ def card_coverter_beta(card):
     
     elif card == "Phoenix" or "Phx":
         page_list = [
-            "https://cdn.discordapp.com/attachments/747483388415311883/750327686831800430/Phoenix or Phxs_Sun.png",
-            "https://cdn.discordapp.com/attachments/747483388415311883/750327701642018887/Phoenix or Phx_Down.png"
+            "https://cdn.discordapp.com/attachments/747483388415311883/750327686831800430/Phoenix_Sun.png",
+            "https://cdn.discordapp.com/attachments/747483388415311883/750327701642018887/Phoenix_Down.png"
             ]
         return page_list
     
     elif card == "Jett" or "Wushu":
         page_list = [
-            "https://cdn.discordapp.com/attachments/747483388415311883/750327767425351721/Jett or Wushu_Card.webp",
-            "https://cdn.discordapp.com/attachments/747483388415311883/750327779127459840/Jett or Wushu_knife.jpg"
+            "https://cdn.discordapp.com/attachments/747483388415311883/750327767425351721/Jett_Card.webp",
+            "https://cdn.discordapp.com/attachments/747483388415311883/750327779127459840/Jett_knife.jpg"
             ]
         return page_list
     
     elif card == "Raze" or "Clay":
         page_list = [
-            "https://cdn.discordapp.com/attachments/747483388415311883/750328574078091395/Raze or Clay_Up.png"
+            "https://cdn.discordapp.com/attachments/747483388415311883/750328574078091395/Raze_Up.png"
             ]
         return page_list
     
     elif card == "Breach" or "Cabbage" or "Lettuce":
         page_list = [
             "https://cdn.discordapp.com/attachments/747483388415311883/750327494321766411/Off_Your_Feet.png",
-            "https://cdn.discordapp.com/attachments/747483388415311883/750327511837311076/"Breach" or "Cabbage" or "Lettuce"_2_dog.png"
+            "https://cdn.discordapp.com/attachments/747483388415311883/750327511837311076/Breach_2_dog.png"
             ]
         return page_list
