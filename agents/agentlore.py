@@ -20,9 +20,7 @@ class AgentLore(commands.Cog):
                     colour = agent_hex(agent),
                     title = "__{} Lore:__".format(json_data['data'][i]['displayName']),
                     description = "[Click for Official {} Lore]({})".format(json_data['data'][i]['displayName'], lore_link_official(agent)) + "\n[Click for Unofficial {} Lore]({})".format(json_data['data'][i]['displayName'], lore_link_unofficial(agent))
-                ).add_field(name = "__Agent Info:__",
-                            value="```Name: {}\nCodename: {}\nReal Name: {}\nAgent ID: {}\nCountry: {}\nType: {}```".format(json_data['data'][i]['displayName'],json_data['data'][i]['developerName'],real_name(agent), agent_order(agent),agent_country(agent),json_data['data'][i]['role']['displayName']),
-                            inline=True).set_thumbnail(url="{}".format(json_data['data'][i]['displayIcon'])).set_footer(text="Page 1/4"),
+                ).add_field(name = "__Agent Info:__",value="```Name: {}\nCodename: {}\nReal Name: {}\nAgent ID: {}\nCountry: {}\nType: {}```".format(json_data['data'][i]['displayName'],json_data['data'][i]['developerName'],real_name(agent), agent_order(agent),agent_country(agent),json_data['data'][i]['role']['displayName']),inline=True).set_thumbnail(url="{}".format(json_data['data'][i]['displayIcon'])).set_footer(text="Page 1/4"),
                 
                 discord.Embed(
                     colour = agent_hex(agent),
