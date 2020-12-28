@@ -28,7 +28,7 @@ class Map(commands.Cog):
         await ctx.send(embed=embed)
 
     #Map Code#
-    @commands.command(aliases=["maps", "map"])
+    @commands.command()
     async def codes(self, ctx):
         embed = discord.Embed(
             colour=0xFF4654
