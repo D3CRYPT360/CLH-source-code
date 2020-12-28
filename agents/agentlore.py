@@ -69,7 +69,7 @@ class AgentLore(commands.Cog):
 
     @commands.command(aliases = ['brimstone','omen','killjoy', 'cypher', 'sage' ,'sova', 'phoneix', 'jett', 'skye', 'reyna', 'raze', 'breach'])
     async def viper(self, ctx):
-        await ctx.send("Command has changed to `/agent [agentname]` without the []")
+        await ctx.send("Command has changed to `/agent [agentname]` without the []", delete_after=5)
 
     @commands.command(description="Shows the lore about rifts")
     async def rift(self, ctx):
