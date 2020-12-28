@@ -23,6 +23,10 @@ class maps(commands.Cog):
                 embed.set_image(url="{}".format(json_data['data'][i]['listViewIcon'])),
                 embed.add_field(name="__{} Info:__".format(json_data['data'][i]['displayName']),value="```\nCodename: {}\nLocation: {}\nCoordinates: {}```".format(maps_codename(maps), maps_real(maps), json_data['data'][i]['coordinates'])),     
                 await ctx.send(embed=embed)
+    
+    @commands.command(aliases=['ascent', 'icebox', 'haven', 'split'])
+    async def bind(self, ctx):
+        await ctx.send("Command has changed to `/map [mapName]` without the []", delete_after=30)
                 
 
 def setup(bot):

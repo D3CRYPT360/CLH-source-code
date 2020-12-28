@@ -20,9 +20,7 @@ class AgentLore(commands.Cog):
                     colour = agent_hex(agent),
                     title = "__{} Lore:__".format(json_data['data'][i]['displayName']),
                     description = "[Click for Official {} Lore]({})".format(json_data['data'][i]['displayName'], lore_link_official(agent)) + "\n[Click for Unofficial {} Lore]({})".format(json_data['data'][i]['displayName'], lore_link_unofficial(agent))
-                ).add_field(name = "__Agent Info:__",
-                            value="```Name: {}\nCodename: {}\nReal Name: {}\nAgent ID: {}\nCountry: {}\nType: {}```".format(json_data['data'][i]['displayName'],json_data['data'][i]['developerName'],real_name(agent), agent_order(agent),agent_country(agent),json_data['data'][i]['role']['displayName']),
-                            inline=True).set_thumbnail(url="{}".format(json_data['data'][i]['displayIcon'])).set_footer(text="Page 1/4"),
+                ).add_field(name = "__Agent Info:__",value="```Name: {}\nCodename: {}\nReal Name: {}\nAgent ID: {}\nCountry: {}\nType: {}```".format(json_data['data'][i]['displayName'],json_data['data'][i]['developerName'],real_name(agent), agent_order(agent),agent_country(agent),json_data['data'][i]['role']['displayName']),inline=True).set_thumbnail(url="{}".format(json_data['data'][i]['displayIcon'])).set_footer(text="Page 1/4"),
                 
                 discord.Embed(
                     colour = agent_hex(agent),
@@ -72,6 +70,18 @@ class AgentLore(commands.Cog):
     @commands.command(aliases = ['brimstone','omen','killjoy', 'cypher', 'sage' ,'sova', 'phoneix', 'jett', 'skye', 'reyna', 'raze', 'breach'])
     async def viper(self, ctx):
         await ctx.send("Command has changed to `/agent [agentname]` without the []")
+
+    @commands.command(description="Shows the lore about rifts")
+    async def rift(self, ctx):
+        embed = discord.Embed(
+            colour=0x48ADEB,
+            title="**Rift Lore**:",
+            description="[Click for Rift lore](https://discord.com/channels/708983243847761931/727811131254505523/748854274343043152)",
+        )
+        embed.add_field(name="__Rift Info__", value="```A Rift is a wormhole (found in the game files).\n\nA wormhole can be visualized as a tunnel with two ends at seperate points in spacetime (i.e., different locations or different points in time, or both).```")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/784077729082376192/789785522016747542/skye__agent_reveal_trailer_-_v_1.gif")
+
+        await ctx.send(embed=embed)
 
 def setup(bot):
     bot.add_cog(AgentLore(bot))
