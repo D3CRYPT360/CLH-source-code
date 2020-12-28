@@ -9,10 +9,6 @@ class Misc(commands.Cog):
         self.bot = bot
 
 
-    @commands.command(description="Total Agents in Valorant")
-    async def agents(self, ctx):
-        await ctx.send("**There are a total of 13 Agents in Valorant so far**.")
-
     @commands.command(description="Gives free nitro updates everyday :D")
     async def nitro(self, ctx):
         await ctx.send('<:kekyou:761896381404938241>')
