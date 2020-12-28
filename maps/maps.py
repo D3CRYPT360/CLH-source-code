@@ -1,84 +1,30 @@
 import discord
 from discord.ext import commands
 import asyncio
+from utils.maps_def import map_hex, lore_link_general, lore_link_scrapped, lore_link_unconfirmed, maps_codename, maps_real
+from utils.requesting import Maps
 
 class maps(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
         
-    @commands.command(aliases=["bonsai"])
-    async def split(self, ctx):
-        embed = discord.Embed(
-            colour=discord.Colour.teal(),
-            title = "__Split Lore:__",
-            description="[Click for General Lore](https://discordapp.com/channels/708983243847761931/747040395891966002/747051202482667602)\n[Click for Unconfirmed Lore](https://discordapp.com/channels/708983243847761931/749187232530825266/749326681923256340)\n[Click for Scrapped Lore](https://discordapp.com/channels/708983243847761931/749305721467699273/749902333302800384)",
-        )
-        embed.set_image(url="https://media.discordapp.net/attachments/784077729082376192/789486400960856094/Bonsai_preview.png"),
-        embed.add_field(name="__Split Info:__", value="```\nCodename: Bonsai\nLocation: Tokyo/Japan\nCoordinates: 35.683333, 139.683333```"),
-        await ctx.send(embed=embed)
+    @commands.command()
+    async def map(self, ctx, map):
+        json_data = Maps()
+        maps = map.capitalize()
+        for i in range(len(json_data['data'])):
+            if json_data['data'][i]['displayName'] == maps: 
+                embed = discord.Embed(
+                    colour= map_hex(maps),
+                    title = "__{} Lore:__".format(json_data['data'][i]['displayName']),
+                    description="[Click for General Lore]({})".format(lore_link_general(maps)) + "\n[Click for Unconfirmed Lore]({})".format(lore_link_unconfirmed(maps)) + "\n[Click for Scrapped Lore]({})".format(lore_link_scrapped(maps))
+                )
+                embed.set_image(url="{}".format(json_data['data'][i]['listViewIcon'])),
+                embed.add_field(name="__{} Info:__".format(json_data['data'][i]['displayName']),value="```\nCodename: {}\nLocation: {}\nCoordinates: {}```".format(maps_codename(maps), maps_real(maps), json_data['data'][i]['coordinates'])),     
+                await ctx.send(embed=embed)
+                
 
-
-    @commands.command(aliases=["duality"])
-    async def bind(self, ctx):
-        embed = discord.Embed(
-            colour=discord.Colour.dark_gold(),
-            title = "__Bind Lore:__",
-            description="[Click for General Lore](https://discord.com/channels/708983243847761931/747040395891966002/747143027440484453)\n[Click for Unconfirmed Lore](https://discord.com/channels/708983243847761931/749187232530825266/749309432994726011)\n[Click for Scrapped Lore](https://discord.com/channels/708983243847761931/749305721467699273/749898301335142411)",
-        )
-        embed.set_image(url="https://media.discordapp.net/attachments/784077729082376192/789486406762233946/Duality_preview.png"),
-        embed.add_field(name="__Bind Info:__", value="```\nCodename: Duality\nLocation: Rabat/Morocco\nCoordinates: 34.033333, -6.850000```"),
-        await ctx.send(embed=embed)
-    
-    
-    @commands.command(aliases=["triad"])
-    async def haven(self, ctx):
-        embed = discord.Embed(
-            colour=discord.Colour.red(),
-            title = "__Haven Lore:__",
-            description="[Click for General Lore](https://discord.com/channels/708983243847761931/747040395891966002/747392315944992819)\n[Click for Scrapped Lore](https://discord.com/channels/708983243847761931/749305721467699273/749914184367472713)",
-        )
-        embed.set_image(url="https://media.discordapp.net/attachments/784077729082376192/789486415570272266/Triad_preview.png"),
-        embed.add_field(name="__Haven Info:__", value="```\nCodename: Triad\nLocation: Thimphu/Bhutan\nCoordinates: 27.466667, 89.633333```"),
-        await ctx.send(embed=embed)
-
-
-    @commands.command(aliases=["venice"])
-    async def ascent(self, ctx):
-        embed = discord.Embed(
-            colour=discord.Colour.dark_orange(),
-            title = "__Ascent Lore:__",
-            description="[Click for General Lore](https://discord.com/channels/708983243847761931/747040395891966002/747136697036177458)\n[Click for Unconfirmed Lore](https://discord.com/channels/708983243847761931/749187232530825266/749306607669608499)\n[Click for Scrapped Lore](https://discord.com/channels/708983243847761931/749305721467699273/749914435455549480)",
-        )
-        embed.set_image(url="https://media.discordapp.net/attachments/784077729082376192/789486398855053312/Ascent_preview.png"),
-        embed.add_field(name="__Ascent Info:__", value="```\nCodename: Venice\nLocation: Venice/Italy\nCoordinates: 45.433333, 12.333333```"),
-        await ctx.send(embed=embed)
-
-
-    @commands.command(aliases=["port"])
-    async def icebox(self, ctx):
-        embed = discord.Embed(
-            colour=discord.Colour.blurple(),
-
-            title = "__Icebox Lore:__",
-            description="[Click for General Lore](https://discord.com/channels/708983243847761931/747040395891966002/763054857421848597)\n[Click for Unconfirmed Lore](https://discord.com/channels/708983243847761931/749187232530825266/763068019030229022)\n[Click for Scrapped Lore](https://discord.com/channels/708983243847761931/749305721467699273/763323710764613632)",
-        )
-        embed.set_image(url="https://media.discordapp.net/attachments/784077729082376192/789486419868385310/Icebox_preview.png"),
-        embed.add_field(name="__Icebox Info:__", value="```\nCodename: Port\nLocation: Bennett Island/Russia\nCoordinates: 76.733333, 149.500000```"),
-        await ctx.send(embed=embed)
-
-    @commands.command(aliases=["poveglia"])
-    async def range(self, ctx):
-        embed = discord.Embed(
-            colour=discord.Colour.orange(),
-
-            title = "__Range Lore:__",
-            description="[Click for General Lore](https://discord.com/channels/708983243847761931/747040395891966002/748104154362413166)\n[Click for Scrapped Lore](https://discord.com/channels/708983243847761931/749305721467699273/765456380576137234)",
-        )
-        embed.set_image(url="https://media.discordapp.net/attachments/784077729082376192/790108920290213908/5f76120834b55065b321e728_WestStudio-Valorant-26.jpg"),
-        embed.add_field(name="__Range Info:__", value="```\nCodename: Poveglia\nLocation: Venice/Italy\nCoordinates: 45.433333, 12.333333```"),
-        await ctx.send(embed=embed)
-        
 def setup(bot):
     bot.add_cog(maps(bot))
     print('Maps.py loaded')
