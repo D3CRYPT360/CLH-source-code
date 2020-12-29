@@ -27,7 +27,7 @@ def card_coverter_global(card):
         return "Mirrored Edge Card"
     
     elif card == "Reyna":
-        return "Revenge For Life Card"
+        return "Revenge for Life Card"
 
     elif card == "Raze":
         return "Rising Up Card"
@@ -62,7 +62,7 @@ def card_coverter_beta(card):
 
     elif card == "Cypher":
         page_list = [
-            "https://cdn.discordapp.com/attachments/747483388415311883/750327597644382298/Cypher_1_m1.png",
+            "https://cdn.discordapp.com/attachments/747483388415311883/750327597644382298/cypher_1_m1.png",
             "https://cdn.discordapp.com/attachments/747483388415311883/750327609199689808/Cypher_card.png"
             ]
         return page_list
@@ -96,10 +96,7 @@ def card_coverter_beta(card):
         return page_list
     
     elif card == "Raze":
-        page_list = [
-            "https://cdn.discordapp.com/attachments/747483388415311883/750328574078091395/Raze_Up.png"
-            ]
-        return page_list
+        return "https://cdn.discordapp.com/attachments/747483388415311883/750328574078091395/Raze_Up.png"
     
     elif card == "Breach":
         page_list = [
