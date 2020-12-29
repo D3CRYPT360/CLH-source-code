@@ -1,9 +1,8 @@
-import discord
+import discord, time, datetime, asyncio, platform
 from discord.ext import commands
 from disputils import BotEmbedPaginator
-import asyncio
-import platform
 
+start_time = time.time()
 class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -97,6 +96,9 @@ class Help(commands.Cog):
         pythonVersion = platform.python_version()
         dpyVersion = discord.__version__
         memberCount = len(set(self.bot.get_all_members()))
+        current_time = time.time()
+        difference = int(round(current_time - start_time))
+        text = str(datetime.timedelta(seconds=difference))
 
         embed = discord.Embed(title=f'{self.bot.user.name} Stats', description='', colour=discord.Colour.red(), timestamp=ctx.message.created_at)
 
@@ -104,6 +106,8 @@ class Help(commands.Cog):
         embed.add_field(name='Python Version:', value=pythonVersion)
         embed.add_field(name='Discord.py Version', value=dpyVersion)
         embed.add_field(name='C.V. Lore Den Members:', value=memberCount)
+        
+        embed.add_field(name='Bot Uptime:', value=text)
         embed.add_field(name='Bot Developers:', value="<@482179909633048597>\n<@563361513281421313>")
 
 
