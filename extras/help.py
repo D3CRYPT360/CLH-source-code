@@ -15,11 +15,11 @@ class Help(commands.Cog):
             title="📖 Lore Commands",
             colour=0xFF4654
         ).add_field(
-            name="`/(Agent Name)`",
+            name="`/agent (Agent Name)`",
             value="Shows the lore about the agent specified (eg. `/cypher`)",
             inline=False
         ).add_field(
-            name="`/(Map Name)`",
+            name="`/map (Map Name)`",
             value="Shows the lore about the map specified (eg. `/split`)" ,
             inline=False
         
@@ -69,7 +69,10 @@ class Help(commands.Cog):
         await message.add_reaction("◀️")
         await message.add_reaction("▶️")
         def check(reaction, user):
-            return user == ctx.author and str(reaction.emoji) in ["◀️", "▶️"]
+            if reaction.message.id == message.id:
+                return user == ctx.author and str(reaction.emoji) in ["◀️", "▶️"]
+            else:
+                pass
 
         while True:
             try:
