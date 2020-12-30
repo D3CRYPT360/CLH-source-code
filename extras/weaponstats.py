@@ -5,34 +5,6 @@ import DiscordUtils
 
 
 
-"""
-Str = ''
-For i in range(len(json_data[][]['damageRanges'])):
-    Range = json_data[][]['damageRanges'][I]
-    Str += f'range 
-{Range['rangestart]}-{range['rangeend]} is \n head {range['head']} /n leg {range['leg']}'
-
-"""
-
-
-# ("```py"+
-#         "\n Firerate: {}".format(json_data['data'][i]['weaponStats']['fireRate']) +
-#         "\n Magazine size: {}".format(json_data['data'][i]['weaponStats']['magazineSize']) +
-#         "\n First Bullet Accuracy: {}".format(json_data['data'][i]['weaponStats']['firstBulletAccuracy']) +
-#         "\n Wall Penetration: {}".format((json_data['data'][i]['weaponStats']['wallPenetration']).replace("EWallPenetrationDisplayType::", '')) +
-#         "\n------------------------" +
-#         "\n Damage done by {} without armour".format(json_data['data'][i]['displayName']) +
-#         "\n Head Damage: {}".format(json_data['data'][i]['weaponStats']['damageRanges'][0]['headDamage']) +
-#         "\n Body Damage: {}".format(json_data['data'][i]['weaponStats']['damageRanges'][0]['bodyDamage']) +
-#         "\n Leg Damage: {}".format(json_data['data'][i]['weaponStats']['damageRanges'][0]['legDamage']) +
-#         "\n------------------------" +
-#         "\n Damage ranges of {} with armour".format(json_data['data'][i]['displayName']) +
-#         "\n Head Damage: {}".format(json_data['data'][i]['weaponStats']['damageRanges'][1]['headDamage']) +
-#         "\n Body Damage: {}".format(json_data['data'][i]['weaponStats']['damageRanges'][1]['bodyDamage']) +
-#         "\n Leg Damage: {}```".format(json_data['data'][i]['weaponStats']['damageRanges'][1]['legDamage'])
-#         )
-                     
-
 class weaponStats(commands.Cog):
     def __init__(self, bot):
         self.bot=bot
@@ -61,7 +33,7 @@ class weaponStats(commands.Cog):
                                     "```py"+
                                     "\n Firerate: {}".format(json_data['data'][i]['weaponStats']['fireRate']) +
                                     "\n Magazine size: {}".format(json_data['data'][i]['weaponStats']['magazineSize']) +
-                                    "\n First Bullet Accuracy: {}".format(json_data['data'][i]['weaponStats']['firstBulletAccuracy']) +
+                                    "\n First Bullet Inaccuracy: {}".format(json_data['data'][i]['weaponStats']['firstBulletAccuracy']) +
                                     "\n Wall Penetration: {}```".format((json_data['data'][i]['weaponStats']['wallPenetration']).replace("EWallPenetrationDisplayType::", '')))
                                 )
                 embed1.set_image(url="{}".format(json_data['data'][i]['displayIcon']))
