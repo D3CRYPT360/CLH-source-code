@@ -23,7 +23,7 @@ class Cards(commands.Cog):
                 )
                 embed.set_image(url="{}".format(json_data['data'][i]['largeArt']))
                 await ctx.send(embed=embed)
-
+                
     @commands.command()
     async def beta(self, ctx, beta_card):
         json_data = Agents()

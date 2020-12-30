@@ -60,6 +60,10 @@ class Egg(commands.Cog):
     @commands.command()
     async def spy(self, ctx):
         await ctx.send("https://static.wikia.nocookie.net/teamfortress/images/a/a5/Spy_backstabbing_the_Heavy_TF2.png")
+		
+    @commands.command()
+    async def hackerman(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/778299042630729781/793801209772376064/unknown.png")
 
 
 def setup(bot):
