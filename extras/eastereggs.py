@@ -42,7 +42,6 @@ class Egg(commands.Cog):
         dog = r.json()
         await ctx.send(dog['link'])
         
-    
     @commands.command()
     async def shatter(self, ctx):
         embed = discord.Embed(
@@ -54,10 +53,13 @@ class Egg(commands.Cog):
         embed.set_thumbnail(url="https://media.discordapp.net/attachments/784077729082376192/791272831543148585/TX_Hud_Character_Shatter.png")
         await ctx.send(embed=embed)
         
-    
     @commands.command()
     async def stealth(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/784077729082376192/791275751944093736/unknown.png")
+
+    @commands.command()
+    async def spy(self, ctx):
+        await ctx.send("https://static.wikia.nocookie.net/teamfortress/images/a/a5/Spy_backstabbing_the_Heavy_TF2.png")
 
 
 def setup(bot):
