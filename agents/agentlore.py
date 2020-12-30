@@ -44,7 +44,10 @@ class AgentLore(commands.Cog):
                 await message.add_reaction("◀️")
                 await message.add_reaction("▶️")
                 def check(reaction, user):
-                    return user == ctx.author and str(reaction.emoji) in ["◀️", "▶️"]
+                    if reaction.message.id == message.id:
+                        return user == ctx.author and str(reaction.emoji) in ["◀️", "▶️"]
+                    else:
+                        pass
 
                 while True:
                     try:
