@@ -13,7 +13,7 @@ class Down(commands.Cog):
     async def status(self, ctx, region):
         region = Region(region)
         if region.get_status_issue() == False:
-            await ctx.send("no errors")
+            await ctx.send("No recent issues or incidents reported")
         else:
             if region.incident_check() == True:
                 embed = discord.Embed(
