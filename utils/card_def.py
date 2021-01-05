@@ -2,41 +2,46 @@ def card_coverter_global(card):
     if card == "Brimstone":
         return "No One Left Behind Card"
     
-    elif card == "Viper":
+    if card == "Viper":
         return "One Dark Night Card"
     
-    elif card == "Omen":
+    if card == "Omen":
         return "What's Another Death Card"
     
-    elif card == "Killjoy":
+    if card == "Killjoy":
         return "Nächtelang Card"
     
-    elif card == "Cypher":
+    if card == "Cypher":
         return "Redeemers Folly Card"
     
-    elif card == "Sova":
+    if card == "Sova":
         return "Through The Looking Glass Card"
     
-    elif card == "Sage":
+    if card == "Sage":
         return "Journey Of Trials Card"
     
-    elif card == "Phoenix":
+    if card == "Phoenix":
         return "Firestarter Card"
     
-    elif card == "Jett":
+    if card == "Jett":
         return "Mirrored Edge Card"
     
-    elif card == "Reyna":
+    if card == "Reyna":
         return "Revenge for Life Card"
 
-    elif card == "Raze":
+    if card == "Raze":
         return "Rising Up Card"
     
-    elif card == "Breach":
+    if card == "Breach":
         return "Big Payday Card"
     
-    elif card == "Skye":
+    if card == "Skye":
         return "The Great Reclaimer Card"
+    
+    if card == "Yoru":
+        return "Origin Revealed Card"
+    
+
     
 def card_coverter_beta(card):
     if card == "Brimstone":
