@@ -2,6 +2,7 @@ import discord
 import asyncio
 from discord.ext import commands
 from utils.agent_def import agent_country, real_name, agent_order, lore_link_official, lore_link_unofficial, agent_hex
+from utils.agent_def import aliases
 from utils.requesting import Agents
 
 class AgentLore(commands.Cog):
@@ -13,8 +14,9 @@ class AgentLore(commands.Cog):
     async def agent(self, ctx, agent):
         json_data = Agents()
         agent = agent.capitalize()
+        agnt_aliases = aliases(agent)
         for i in range(len(json_data['data'])):
-            if json_data['data'][i]['displayName'] == agent:
+            if json_data['data'][i]['displayName'] == agent or json_data['data'][i]['displayName'] == agnt_aliases:
                 contents = [
                 discord.Embed(
                     colour = agent_hex(agent),
