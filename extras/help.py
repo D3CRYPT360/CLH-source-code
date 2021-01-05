@@ -6,7 +6,7 @@ start_time = time.time()
 class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.bot.version = "11.6"
+        self.bot.version = "13.9"
 
     @commands.command()
     async def help(self, ctx):
