@@ -2,8 +2,7 @@ import discord
 from discord.ext import commands
 from valoStatus import Region
 
-thumbnail = "https://cdn.discordapp.com/avatars/514418193364942850/7c56b3712cd14ae3db6c8593c5f23cf5.png?size=256"
-
+thumbnail = "https://cdn.discordapp.com/attachments/745696342260711516/797394997698756638/Valorant.v2.png"
 
 class Down(commands.Cog):
     def __init__(self, bot):
