@@ -4,4 +4,4 @@
 
 A valorant lore bot for a private server
 
-- Horrible codes kero
+- Guess this is useless now, server got deleted...sadge
