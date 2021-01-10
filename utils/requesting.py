@@ -25,7 +25,7 @@ def Weapon():
         return "Something went wrong"
     
 def Card():
-    r = requests.get("https://valorant-api.com/v1/cards")
+    r = requests.get("https://valorant-api.com/v1/playercards")
     if r.status_code == 200:
         json_data = r.json()
         return json_data

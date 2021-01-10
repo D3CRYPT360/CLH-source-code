@@ -20,6 +20,7 @@ class Down(commands.Cog):
                     title = region.incidents_title()
                 )
                 embed.add_field(name=region.incidents_date(), value=region.incidents_reason())
+                embed.set_thumbnail(url=thumbnail)
                 await ctx.send(embed=embed)
                 
             elif region.maintenence_check() == True:
@@ -28,6 +29,7 @@ class Down(commands.Cog):
                     title = region.maintenances_title()
                 )
                 embed.add_field(name=region.maintenances_date(), value=region.maintenances_reason())
+                embed.set_thumbnail(url=thumbnail)
                 await ctx.send(embed=embed)
                 
             elif region.maintenence_check() == True and region.incident_check() == True:
@@ -36,6 +38,7 @@ class Down(commands.Cog):
                     title = region.incidents_title()
                 )
                 embed1.add_field(name=region.incidents_date(), value=region.incidents_reason())
+                embed1.set_thumbnail(url=thumbnail)
                 await ctx.send(embed=embed1)
                 
                 embed2 = discord.Embed(
@@ -43,6 +46,7 @@ class Down(commands.Cog):
                     title = region.maintenances_title()
                 )
                 embed2.add_field(name=region.maintenances_date(), value=region.maintenances_reason())
+                embed2.set_thumbnail(url=thumbnail)
                 await ctx.send(embed=embed2)
 
     
